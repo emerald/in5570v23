@@ -3,7 +3,7 @@
 Updated: 2022-12-08
 
   * [Planet Lab Europe nodes in the diku_IN5570 slice](diku_in5570_slice.txt): 813
-  * [Good nodes in the diku_IN5570 slice](good-nodes.txt): 2
+  * [Good nodes in the diku_IN5570 slice](good-nodes.txt): 4
 
 What classifies as a good node:
 
