@@ -36,6 +36,17 @@ January 26, 2023
 
 ---
 
+# Compiling and running programs.
+
+The container file-system is ephemeral (will disappear after you close the
+container). However, it will mount your current directory as a volume. Your
+changes in this directory _will persist_.
+
+The container provides two programs `ec` and `emx`. The former compiles an
+emerald program, the latter runs it.
+
+---
+
 # Examples:
 
 Read the code for the following programs:
