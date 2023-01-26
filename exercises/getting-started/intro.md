@@ -31,8 +31,8 @@ January 26, 2023
 1. Install Docker.
 2. Visit: https://github.com/emerald/in5570v23/ .
 3. Modify the Makefile to suit your setup.
-4. Using the Makefile, run `make environment`.
-5. Alternatively run `make fresh`.
+4. Using the Makefile, run the command "`make environment`".
+5. Alternatively run the command "`make fresh`".
 
 ---
 
