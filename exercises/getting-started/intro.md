@@ -1,6 +1,8 @@
 
 # IN[59]570 Exercise Session 0
 
+Installing Emerald.
+
 Joachim Tilsted Kristensen
 `joachkr@ifi.uio.no`
 
