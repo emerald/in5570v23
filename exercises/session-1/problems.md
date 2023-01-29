@@ -27,7 +27,7 @@ You have several options.
 
 Here is a program:
 
-```prolog
+```matlab
 % Prints a greeting to standard out.
 const Program <-
   object greeting
@@ -57,7 +57,7 @@ An object *A* _conforms_ to another object *B* precisely iff:
 
 An object is considered a _type_ whenever it conforms to:
 
-```prolog
+```matlab
 % If another object conforms to this object, we consider it a type.
 immutable typeobject type
   function getSignature -> [Signature]
@@ -107,7 +107,7 @@ end definition
 
 # Something that does not work (recursive types)
 
-```prolog
+```matlab
 const ListType <-
   immutable object _
     export function of [ A : type ] -> [ ListOfAs : type ]
@@ -130,7 +130,7 @@ const ListType <-
 
 Consider the type:
 
-```prolog
+```matlab
 % A stack is something that supports push, pop and size.
 const StackType <- immutable object declaration
   export function of [ A : type ] -> [ StackOfAs : type ]
@@ -146,7 +146,7 @@ end declaration
 
 and finish the implementation:
 
-```prolog
+```matlab
 % Stack.of[Integer] returns an empty stack.
 const Stack <- immutable object library
   export function of [ A : type ] -> [ StackOfAs : StackType.of[A] ]
@@ -161,7 +161,7 @@ end library
 Look at the provided library `morphism.m`, extend your implementation of
 `Stack` to include a function:
 
-```prolog
+```matlab
   export function map
     [ f       : Arrow.of[A, B] ] ->
     [ Functor : Arrow.of[StackType.of[A], StackType.of[B]] ]
@@ -183,7 +183,7 @@ An object declared with the special keyword `class` will automatically have
 an extra function called `create` of a certain arity. For instance, the
 object:
 
-```prolog
+```matlab
 const Person <- class Person [ name : String ]
   export function getname -> [ result : String ]
     result <- name
@@ -205,7 +205,7 @@ const Main <-
 
 Inheritance just increments the arity of `create`:
 
-```prolog
+```matlab
 const Teacher <- class Teacher ( Person ) [ department : String ]
   export function getDepartment -> [ what : String ]
     what <- department
@@ -226,7 +226,7 @@ const Main <-
 
 # Conformity (continued)
 
-```prolog
+```matlab
 const FromString <-
   typeobject _
     function f [ a : String ] -> [ b : Any ]
@@ -247,7 +247,7 @@ How about visa versa?
 
 Implement an object that conforms to:
 
-```prolog
+```matlab
 const Primes <-
   typeobject Emumerator
     operation next -> [ prime : Integer ]
