@@ -14,7 +14,7 @@ February 02, 2023
 
 # Installation
 
-You appear to have several options.
+You have several options.
 
 1. Look at exercises from last week.
 2. Install linux in a VM, install Docker in the VM.
@@ -24,6 +24,8 @@ You appear to have several options.
 ---
 
 # Hello World
+
+Here is a program:
 
 ```prolog
 % Prints a greeting to standard out.
@@ -48,12 +50,13 @@ $ _
 
 # Objects as Types
 
-The object *A* _conforms_ to the object *B* iff:
+An object *A* _conforms_ to the object *B* iff:
 1. If *B* is immutable, then *A* is immutable.
 2. If *B* has an operation *f_B* then *A* also has an operation *f_A*.
 3. *f_A* and *f_B* are contravariant with respect to conformity.
 
 An object is considered a _type_ whenever it conforms to:
+
 ```prolog
 % If another object conforms to this object, we consider it a type.
 immutable typeobject type
@@ -67,7 +70,9 @@ The special object `Signature` is built-in.
 
 # Example (Cartesian Product)
 
-```Prolog
+Consider the following type
+
+```matlab
 % A product is something that has two projections.
 % We call these projections `first` and `second`.
 const ProductType <- immutable object declaration
@@ -82,11 +87,9 @@ const ProductType <- immutable object declaration
 end declaration
 ```
 
----
+and finish the implementation
 
-# Finish the implementation
-
-```prolog
+```matlab
 % A product factory which has conviniently been called `Product`,
 % such that `Product.of[a, b] : ProductType.of[typeof[a], typeof[b]]`.
 const Product <- immutable object definition
@@ -125,7 +128,8 @@ const ListType <-
 
 # Example (Ephemeral Stack)
 
-Consider the type.
+Consider the type:
+
 ```prolog
 % A stack is something that supports push, pop and size.
 const StackType <- immutable object declaration
@@ -139,7 +143,9 @@ const StackType <- immutable object declaration
   end of
 end declaration
 ```
-Finish the implementation
+
+and finish the implementation:
+
 ```prolog
 % Stack.of[Integer] returns an empty stack.
 const Stack <- immutable object library
@@ -218,7 +224,7 @@ const Main <-
 
 ---
 
-# Conformity (repetition)
+# Conformity (continued)
 
 ```prolog
 const FromString <-
