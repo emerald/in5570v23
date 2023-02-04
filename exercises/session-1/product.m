@@ -13,11 +13,10 @@ const Product <- immutable object product_declaration
         function second -> [ B ]
       end product_interface
 
-    pair <- immutable object product_implementation
-
-      % ... Your code goes here ...
-
-    end product_implementation
+    pair <-
+      immutable object product_implementation
+        % ... Your code goes here ...
+      end product_implementation
 
   end of
 end product_declaration

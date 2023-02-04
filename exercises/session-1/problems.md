@@ -83,9 +83,10 @@ const Product <- immutable object product_declaration
         function first  -> [ A ]
         function second -> [ B ]
       end product_interface
-    pair <- immutable object product_implementation
-      % ... Your code goes here ...
-    end product_implementation
+    pair <-
+      immutable object product_implementation
+        % ... Your code goes here ...
+      end product_implementation
   end of
 end product_declaration
 ```
@@ -100,10 +101,10 @@ const ListType <-
     export function of [ A : type ] -> [ ListOfAs : type ]
       forall A
       ListOfAs <-
-        immutable typeobject interface
+        typeobject interface
           function length -> [ integer        ]
           function head   -> [ A              ]
-          function tail   -> [ ListType.of[A] ]
+          function tail   -> [ ListType.of[A] ] % infinite recursion.
         end interface
     end of
   end _
@@ -122,11 +123,12 @@ Consider the type:
 const StackType <- immutable object declaration
   export function of [ A : type ] -> [ StackOfAs : type ]
     forall A
-    StackOfAs <- typeobject interface
-      operation push    [ A ]
-      operation pop  -> [ A ]
-      function  size -> [ integer ]
-    end interface
+    StackOfAs <-
+      typeobject interface
+        operation push    [ A ]
+        operation pop  -> [ A ]
+        function  size -> [ integer ]
+      end interface
   end of
 end declaration
 ```
