@@ -70,37 +70,30 @@ The special object `Signature` is built-in.
 
 # Example (Cartesian Product)
 
-Consider the following type
+Finish the implementation
 
 ```matlab
 % A product is something that has two projections.
-% We call these projections `first` and `second`.
-const ProductType <- immutable object declaration
-  export function of [ A : type, B : type ] -> [ AxB : type ]
+const Product <- immutable object implementation
+  export function of [ left : A, right : B  ] -> [ pair : AxB ]
+
     forall A
     forall B
-    AxB <- immutable typeobject interface
-      function first  -> [ A ]
-      function second -> [ B ]
-    end interface
-  end of
-end declaration
-```
 
-and finish the implementation
+    where AxB <-
+      typeobject product_interface
+        function first  -> [ A ]
+        function second -> [ B ]
+      end product_interface
 
-```matlab
-% A product factory which has conviniently been called `Product`,
-% such that `Product.of[a, b] : ProductType.of[typeof[a], typeof[b]]`.
-const Product <- immutable object definition
-  export function of [ left : A, right : B  ] -> [ pair : ProductType.of[A, B] ]
-    forall A
-    forall B
     pair <- immutable object implementation
-      % Your code goes here.
+
+      % ... your code here ...
+
     end implementation
+
   end of
-end definition
+end implementation
 ```
 
 ---
