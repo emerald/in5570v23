@@ -222,5 +222,5 @@ const Primes <-
   end Emumerator
 ```
 
-The first result of calling `Primes.next[]` should be `2`.
+The first result of calling `next[]` should be `2`.
 How many primes are there between 0 and 200?
