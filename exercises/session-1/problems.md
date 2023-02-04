@@ -74,26 +74,20 @@ Finish the implementation
 
 ```matlab
 % A product is something that has two projections.
-const Product <- immutable object implementation
+const Product <- immutable object product_declaration
   export function of [ left : A, right : B  ] -> [ pair : AxB ]
-
     forall A
     forall B
-
     where AxB <-
       typeobject product_interface
         function first  -> [ A ]
         function second -> [ B ]
       end product_interface
-
-    pair <- immutable object implementation
-
-      % ... your code here ...
-
-    end implementation
-
+    pair <- immutable object product_implementation
+      % ... Your code goes here ...
+    end product_implementation
   end of
-end implementation
+end product_declaration
 ```
 
 ---
@@ -145,27 +139,6 @@ const Stack <- immutable object library
   export function of [ A : type ] -> [ StackOfAs : StackType.of[A] ]
   % Your code goes here.
 end library
-```
-
----
-
-# Challenge (Functor abstraction).
-
-Look at the provided library `morphism.m`, extend your implementation of
-`Stack` to include a function:
-
-```matlab
-  export function map
-    [ f       : Arrow.of[A, B] ] ->
-    [ Functor : Arrow.of[StackType.of[A], StackType.of[B]] ]
-    forall A
-    forall B
-    Functor <- immutable object lifting
-      function of [ S : StackType.of[A] ] -> [ T : StackType.of[B] ]
-        % Your code goes here.
-      end of
-    end lifting
-  end map
 ```
 
 ---

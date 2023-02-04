@@ -41,6 +41,7 @@ const Stack <- immutable object library
 
 end library
 
+% ... Try it out ...
 const Program <-
   object Main
     initially

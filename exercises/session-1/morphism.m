@@ -9,7 +9,7 @@ const Arrow <- immutable object declaration
     forall A
     forall B
 
-    F <- immutable typeobject interface
+    F <- typeobject interface
 
       function of [ A ] -> [ B ]
 
@@ -28,7 +28,7 @@ const Composition <- immutable object definition
     forall B
     forall C
 
-    H <- immutable object implementation
+    H <- object implementation
 
       export function of [ x : A ] -> [ y : C ]
         y <- G.of[F.of[x]]

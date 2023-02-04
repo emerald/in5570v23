@@ -1,7 +1,7 @@
 export Product
 
 % A product is something that has two projections.
-const Product <- immutable object implementation
+const Product <- immutable object product_declaration
   export function of [ left : A, right : B  ] -> [ pair : AxB ]
 
     forall A
@@ -13,21 +13,16 @@ const Product <- immutable object implementation
         function second -> [ B ]
       end product_interface
 
-    pair <- immutable object implementation
+    pair <- immutable object product_implementation
 
-      export function first -> [ projection : A ]
-        projection <- left
-      end first
+      % ... Your code goes here ...
 
-      export function second -> [ projection : B ]
-        projection <- right
-      end second
-
-    end implementation
+    end product_implementation
 
   end of
-end implementation
+end product_declaration
 
+% ... Try it out ...
 const Program <-
   object Main
     initially
