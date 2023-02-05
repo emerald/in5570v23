@@ -13,17 +13,18 @@ const Product <- immutable object implementation
         function second -> [ B ]
       end product_interface
 
-    pair <- immutable object implementation
+    pair <-
+      immutable object product_implementation
 
-      export function first -> [ projection : A ]
-        projection <- left
-      end first
+        export function first -> [ projection : A ]
+          projection <- left
+        end first
 
-      export function second -> [ projection : B ]
-        projection <- right
-      end second
+        export function second -> [ projection : B ]
+          projection <- right
+        end second
 
-    end implementation
+    end product_implementation
 
   end of
 end implementation
