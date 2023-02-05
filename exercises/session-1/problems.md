@@ -53,9 +53,13 @@ $ _
 An object *A* _conforms_ to another object *B* precisely iff:
 1. If *B* is immutable, then *A* is immutable.
 2. If *B* has an operation *f_B* then *A* also has an operation *f_A*.
-3. *f_A* and *f_B* have equally many arguments and results.
-4. *f_A* and *f_B* have covariant argument types with respect to conformity.
-5. *f_A* and *f_B* have contravariant return types with respect to conformity.
+3. *f_A* and *f_B* have the same name.
+4. *f_A* and *f_B* have equally many arguments and results.
+5. *f_A* and *f_B* the argument types of *f_A* conform to those of *f_B*.
+6. *f_A* and *f_B* the return type of *f_B* conforms to that of *f_A*.
+
+In type theory, we say that *f_A* is covariant in the arguments of *f_B*,
+but contravariant in the return type of *f_B*.
 
 An object is considered a _type_ whenever it conforms to:
 
