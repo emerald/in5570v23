@@ -90,3 +90,19 @@ It starts by creating a `condition`. You wait for this condition by calling
 2. Make another object that calls `come_on`.
 3. Run it a couple of times.
 4. Does it work?
+
+---
+
+# Challenge.
+
+1. Extend `wait_for_me` with a method `semi_stop` that takes an extra
+   argument `t` of type `time`. The semantics of `semi_stop` should be that if
+   `invocation` has not been signalled within `t` time. `wait_for_me` should
+   continue without waiting further.
+
+2. What do you need to extend the cyclic barrier from the Oblig to support a
+   timeout?
+
+3. Extend the cyclic write barrier from the oblig with an API call that
+   waits for the barrier for 10 seconds, and then continues if the barrier
+   has not been signalled.
