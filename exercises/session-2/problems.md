@@ -60,7 +60,7 @@ The object `program`, should move it self to the other nodes and then back.
 
 The keyword `monitor` can generally be put in the same places as the word
 `object`, and it defines a "monitored" object. (Read Tony Hoare's
-"Monitors : an operating systems concept" and come back here.
+"Monitors : an operating systems concept" and come back here).
 
 ```matlab
 const wait_for_me <-
