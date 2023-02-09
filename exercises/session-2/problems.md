@@ -17,6 +17,8 @@ the solutions in `solutions/session-1` on GitHub.
 
 ---
 
+# The Kilroy program.
+
 Here is a more advanced version of the `hello world` program, that prints to
 standard out of all connected nodes. Extend the program, to use `move`.
 Consult the Emerald language report for the semantics of `move`.
