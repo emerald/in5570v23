@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="generator" content="Madoko, version 1.1.4" />
+  <meta name="viewport" content="initial-scale=1.0" />
+  <meta name="author" content="Oleks Shturmov" />
+  <title>IN5570v21 Exercise Set 2</title>
+  <style type="text/css"  class="link">
+  /*# sourceURL=madoko.css */
+  
+  .madoko .toc>.tocblock .tocblock .tocblock {
+    margin-left: 2.25em;
+  }
+  .madoko .toc>.tocblock .tocblock {
+    margin-left: 1.5em;
+  }
+  .madoko .toc-contents>.tocblock>.tocitem {
+    font-weight: bold;
+  }
+  .madoko .toc {
+    margin-top: 1em;
+  }
+  .madoko p.para-continue {
+    margin-bottom: 0pt;
+  }
+  .madoko .para-block+p {
+    margin-top: 0pt;
+  }
+  .madoko ul.para-block, .madoko ol.para-block {
+    margin-top: 0pt;
+    margin-bottom: 0pt;
+  }
+  .madoko ul.para-end, .madoko ol.para-end {
+    margin-bottom: 1em;
+  }
+  .madoko dl {
+    margin-left: 0em;
+  }
+  .madoko blockquote {
+    font-style: italic;
+  }
+  .madoko a.localref {
+    text-decoration: none;
+  }
+  .madoko a.localref:hover {
+    text-decoration: underline;
+  }
+  .madoko .footnotes {
+    font-size: smaller;
+    margin-top: 2em;
+  }
+  .madoko .footnotes hr {
+    width: 50%;
+    text-align: left;
+  }
+  .madoko .footnote { 
+    margin-left: 1em;
+  }
+  .madoko .footnote-before {
+    margin-left: -1em;
+    width: 1em;
+    display: inline-block;
+  }
+  .madoko .align-center, .madoko .align-center>p {
+    text-align: center !important;
+  }
+  .madoko .align-center pre {
+    text-align: left;
+  }
+  .madoko .align-center>* {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .madoko .align-left, .madoko .align-left>p {
+    text-align: left !important;
+  }
+  .madoko .align-left>* {
+    margin-left: 0pt !important;
+    margin-right: auto !important;
+  }
+  .madoko .align-right, .madoko .align-right>p {
+    text-align: right !important;
+  }
+  .madoko .align-right>* {
+    margin-left: auto !important;
+    margin-right: 0pt !important;
+  }
+  .madoko .align-center>table,
+  .madoko .align-left>table,
+  .madoko .align-right>table {
+    text-align: left !important;
+  }
+  .madoko .equation-before {
+    float: right;
+  }
+  .madoko .bibitem {
+    font-size: smaller;
+  }
+  .madoko .bibsearch {
+    font-size: x-small;
+    text-decoration:none;
+    color: black;
+    font-family: "Segoe UI Symbol", Symbola, serif;
+  }
+  .madoko .block, .madoko .figure, .madoko .bibitem, .madoko .equation, .madoko div.math {
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+  }
+  .madoko .figure {
+    padding: 0.5em;
+    margin-left: 0pt;
+    margin-right: 0pt;
+  }
+  .madoko .hidden {
+    display: none;
+  }
+  .madoko .invisible {
+    visibility: hidden;
+  }
+  .madoko.preview .invisible {
+    visibility: visible;
+    opacity: 0.5;
+  }
+  .madoko code.code, .madoko span.code {
+    white-space: pre-wrap;
+  }
+  .madoko hr, hr.madoko {
+    border: none;
+    border-bottom: black solid 1px;
+    margin-bottom: 0.5ex;
+  }
+  .madoko .framed>*:first-child {
+    margin-top: 0pt;
+  }
+  .madoko .framed>*:last-child {
+    margin-bottom: 0pt;
+  }
+  .madoko ul.list-style-type-dash {
+      list-style-type: none !important;
+  }
+  .madoko ul.list-style-type-dash > li:before {
+      content: "\2013"; 
+      position: absolute;
+      margin-left: -1em; 
+  }
+  .madoko table.madoko {
+    border-collapse: collapse;
+  }
+  .madoko td, .madoko th {
+    padding: 0ex 0.5ex;
+    margin: 0pt;
+    vertical-align: top;
+  }
+  .madoko .cell-border-left {
+    border-left: 1px solid black;
+  }
+  .madoko .cell-border-right {
+    border-right: 1px solid black;
+  }
+  .madoko thead>tr:first-child>.cell-line,
+  .madoko tbody:first-child>tr:first-child>.cell-line {
+    border-top: 1px solid black;
+    border-bottom: none;
+  }
+  .madoko .cell-line, .madoko .cell-double-line {
+    border-bottom: 1px solid black;
+    border-top: none;
+  }
+  .madoko .cell-double-line {
+    border-top: 1px solid black;
+    padding-top: 1.5px !important;
+  }
+  .madoko .input-mathpre .MathJax_Display {
+    text-align: left !important;
+  }
+  .madoko div.input-mathpre {
+    text-align: left;
+    margin-top: 1.5ex;
+    margin-bottom: 1ex;
+  }
+  .madoko .math-rendering {
+    text-align: left;
+    white-space: pre;
+    color: gray;
+  }
+  .madoko .mathdisplay {
+    text-align: center;
+  }
+  .madoko .pretty table {
+    border-collapse: collapse;
+  }
+  .madoko .pretty td {
+    padding: 0em;
+  }
+  .madoko .pretty td.empty {
+    min-width: 1.5ex;
+  }
+  .madoko .pretty td.expander {
+    width: 100em;
+  }
+  body.madoko, .madoko .serif {
+    font-family: Cambria,"Times New Roman","Liberation Serif","Times",serif;
+  }
+  .madoko .sans-serif {
+    font-family: "Calibri", "Optima", sans-serif;
+  }
+  .madoko .symbol {
+    font-family: "Segoe UI Symbol", Symbola, serif;
+  }
+  body.madoko {  
+    -webkit-text-size-adjust: 100%;       
+    text-rendering: optimizeLegibility;
+  }
+  body.madoko {
+    max-width: 88ex; 
+    margin: 1em auto;
+    padding: 0em 2em;  
+  }
+  body.preview.madoko {
+    padding: 0em 1em;
+  }
+  .madoko p {
+    text-align: justify;
+  }
+  .madoko h1, .madoko h2, .madoko h3, .madoko h4 { 
+    margin-top: 1.22em; 
+    margin-bottom: 1ex;
+  }
+  .madoko h1+p, .madoko h2+p, .madoko h3+p, .madoko h4+p, .madoko h5+p  { 
+    margin-top: 1ex;    
+  }
+  .madoko h5, .madoko h6 { 
+    margin-top: 1ex;
+    font-size: 1em;
+  }
+  .madoko h5 { 
+    margin-bottom: 0.5ex;
+  }
+  .madoko h5 + p {
+    margin-top: 0.5ex;
+  }
+  .madoko h6 { 
+    margin-bottom: 0pt;
+  }
+  .madoko h6 + p {
+    margin-top: 0pt;
+  }
+  .madoko pre, .madoko code, .madoko kbd, .madoko samp, .madoko tt, 
+  .madoko .monospace, .madoko .token-indent, .madoko .reveal pre, .madoko .reveal code, .madoko .email {
+    font-family: Consolas,"Andale Mono WT","Andale Mono",Lucida Console,Monaco,monospace,monospace;
+    font-size: 0.85em;
+  }
+  .madoko pre code, .madoko .token-indent {
+    font-size: 0.95em;
+  }
+  .madoko pre code {
+    font-family: inherit !important;
+  }
+  .madoko ol.linenums li {
+    background-color: white;
+    list-style-type: decimal;
+  }
+  .madoko .remote {
+    background-color: #F0FFF0;
+  }
+  .madoko .remote + * {
+    margin-top: 0pt;
+  }
+  @media print {
+    body.madoko {
+      font-size: 10pt;
+    }
+    @page {
+      margin: 1in 1.5in;
+    }
+  }
+  @media only screen and (max-device-width:1024px) {
+    body.madoko {
+      padding: 0em 0.5em;    
+    }
+    .madoko li {
+      text-align: left;
+    }
+  }
+  
+    </style>
+  
+  </head>
+<body class="madoko">
+
+<div class="body madoko" style="line-adjust:0">
+
+<div class="titleblock align-center para-block" data-line="9" style="text-align:center;line-adjust:0">
+<div class="titleheader align-center" data-line="9" style="text-align:center;line-adjust:0">
+<div class="title para-block" data-line="9" style="font-size:xx-large;font-weight:bold;margin-bottom:0.5ex;line-adjust:0"><span data-line="9"></span>IN5570v21 Exercise Set 2</div>
+<div class="titlenote para-block" data-line="12" style="line-adjust:0"><span data-line="12"></span>v21.1 (2021-02-03)</div></div>
+<div class="authors align-center" data-line="13;2/Echo.mdk:5" style="text-align:center;width:80%;line-adjust:0"><table class="authorrow columns block" data-line="13;2/Echo.mdk:5" style="margin-top:2ex;width:100%;line-adjust:0">
+<tbody><tr><td class="author column" data-line="13;2/Echo.mdk:5" style="text-align:center;line-adjust:0">
+<div class="authorname" data-line="13;2/Echo.mdk:5" style="font-size:large;line-adjust:0"><span data-line="13;2/Echo.mdk:5"></span>Sølve Johnsen</div>
+<div class="authoremail email" data-line="13;2/Echo.mdk:8" style="line-adjust:0"><span data-line="13;2/Echo.mdk:8"></span>solverj@uio.no</div></td><td class="author column" data-line="13;2/Echo.mdk:13" style="text-align:center;line-adjust:0">
+<div class="authorname" data-line="13;2/Echo.mdk:13" style="font-size:large;line-adjust:0"><span data-line="13;2/Echo.mdk:13"></span>Oleks Shturmov</div>
+<div class="authoremail email" data-line="13;2/Echo.mdk:16" style="line-adjust:0"><span data-line="13;2/Echo.mdk:16"></span>olekss@uio.no</div></td></tr></tbody></table></div></div><span data-line="11"></span>
+<nav class="toc toc-contents"><h2 id="sec-contents" class="clearnum h1 heading-contents" data-heading-depth="1" style="display:block">Contents</h2>
+<div class="tocblock tocblock1">
+<div class="tocitem tocitem1" data-toc-target-elem="h1" data-toc-target="sec-echo" data-toc-depth="1" data-toc-line="[1]{.heading-label}.&#8194;Echo" style="toctarget:sec-echo"><a href="#sec-echo" class="localref"><span class="heading-label">1</span>.&#8194;Echo</a></div>
+<div class="tocitem tocitem1" data-toc-target-elem="h1" data-toc-target="sec-the-moving-man" data-toc-depth="1" data-toc-line="[2]{.heading-label}.&#8194;The Moving Man" style="toctarget:sec-the-moving-man"><a href="#sec-the-moving-man" class="localref"><span class="heading-label">2</span>.&#8194;The Moving Man</a></div>
+<div class="tocitem tocitem1" data-toc-target-elem="h1" data-toc-target="sec-watchdog" data-toc-depth="1" data-toc-line="[3]{.heading-label}.&#8194;Watchdog" style="toctarget:sec-watchdog"><a href="#sec-watchdog" class="localref"><span class="heading-label">3</span>.&#8194;Watchdog</a></div>
+<div class="tocitem tocitem1" data-toc-target-elem="h1" data-toc-target="sec-keywords" data-toc-depth="1" data-toc-line="[4]{.heading-label}.&#8194;Keywords" style="toctarget:sec-keywords"><a href="#sec-keywords" class="localref"><span class="heading-label">4</span>.&#8194;Keywords</a></div>
+<div class="tocitem tocitem1" data-toc-target-elem="h1" data-toc-target="sec-tips" data-toc-depth="1" data-toc-line="[5]{.heading-label}.&#8194;Tips" style="toctarget:sec-tips"><a href="#sec-tips" class="localref"><span class="heading-label">5</span>.&#8194;Tips</a></div></div></nav><h2 id="sec-echo" class="h1" data-line="13;2/Echo.mdk:1" data-heading-depth="1" style="display:block"><span data-line="13;2/Echo.mdk:1"></span><span class="heading-before"><span class="heading-label">1</span>.&#8194;</span><span data-line="13;2/Echo.mdk:1"></span>Echo</h2>
+<p class="p noindent" data-line="13;2/Echo.mdk:3"><span data-line="13;2/Echo.mdk:3"></span>Write an Emerald program that echo<span data-line="13;2/Echo.mdk:3"></span>&#39;<span data-line="13;2/Echo.mdk:3"></span>s the received on stdin to all
+active nodes. Let the program end, if it has received the keyword
+<span data-line="13;2/Echo.mdk:5"></span>&#8220;exit&#8221;<span data-line="13;2/Echo.mdk:5"></span> on stdin.
+</p>
+<p class="p indent" data-line="13;2/Echo.mdk:7"><span data-line="13;2/Echo.mdk:7"></span>Let the Emerald-file be called <span data-line="13;2/Echo.mdk:7"></span><code class="code code1">echo.m</code><span data-line="13;2/Echo.mdk:7"></span>, and compile it as <span data-line="13;2/Echo.mdk:7"></span><code class="code code1">echo.x</code><span data-line="13;2/Echo.mdk:7"></span>.
+</p>
+<p class="p indent" data-line="13;2/Echo.mdk:9"><span data-line="13;2/Echo.mdk:9"></span><em class="em-low1">Hint:</em><span data-line="13;2/Echo.mdk:9"></span> You can read a string from stdin using <span data-line="13;2/Echo.mdk:9"></span><code class="code code1">stdin.getstring</code><span data-line="13;2/Echo.mdk:9"></span>,
+however, that might come with a trailing line break due to the user
+pressing Enter. For the purposes of this exercise, you may assume that
+the user always does so. Hence, you might appreciate the following
+auxiliary functions:
+</p>
+<pre class="para-block pre-fenced pre-fenced3 language-emerald lang-emerald emerald colorized" data-line="13;2/Echo.mdk:15" data-line-first="13;2/Echo.mdk:16" style="display:block"><code data-line="13;2/Echo.mdk:16"><span style="color:blue">function</span> stripLast [ i : <span style="color:teal">String</span> ] -&gt; [ o : <span style="color:teal">String</span> ]
+  o &lt;- i.getSlice[ <span class="constant" style="color:purple">0</span>, i.length - <span class="constant" style="color:purple">1</span> ]
+<span style="color:blue">end</span> stripLast
+<span style="color:blue">function</span> readline -&gt; [ o : <span style="color:teal">String</span> ]
+  o &lt;- <span style="color:blue">self</span>.stripLast [ stdin.getstring ]
+<span style="color:blue">end</span> readline</code></pre>
+<p class="p noindent para-continued" data-line="13;2/Echo.mdk:24"><span data-line="13;2/Echo.mdk:24"></span>What happens if some of the nodes become unreachable? Would your
+program crash? Test this. Try and mitigate for this using the
+<span data-line="13;2/Echo.mdk:26"></span><code class="code code1">unavailable</code><span data-line="13;2/Echo.mdk:26"></span> construction.
+</p><h2 id="sec-the-moving-man" class="h1" data-line="15;2/MovingMan.mdk:1" data-heading-depth="1" style="display:block"><span data-line="15;2/MovingMan.mdk:1"></span><span class="heading-before"><span class="heading-label">2</span>.&#8194;</span><span data-line="15;2/MovingMan.mdk:1"></span>The Moving Man</h2>
+<p class="p noindent" data-line="15;2/MovingMan.mdk:3"><span data-line="15;2/MovingMan.mdk:3"></span>Create a program where an object visits each node and collects their
+Node identification. <span data-line="15;2/MovingMan.mdk:4"></span>&#8220;Node identification&#8221;<span data-line="15;2/MovingMan.mdk:4"></span> here consists of a
+concatenation of the node <span data-line="15;2/MovingMan.mdk:5"></span><code class="code code1">Name</code><span data-line="15;2/MovingMan.mdk:5"></span> and <span data-line="15;2/MovingMan.mdk:5"></span><code class="code code1">IncarnationTime</code><span data-line="15;2/MovingMan.mdk:5"></span> (both
+properties of a <span data-line="15;2/MovingMan.mdk:6"></span><code class="code code1">Node</code><span data-line="15;2/MovingMan.mdk:6"></span> object).
+</p>
+<p class="p indent" data-line="15;2/MovingMan.mdk:8"><span data-line="15;2/MovingMan.mdk:8"></span>Let the Emerald-file be called <span data-line="15;2/MovingMan.mdk:8"></span><code class="code code1">movingman.m</code><span data-line="15;2/MovingMan.mdk:8"></span>, and compile it as
+<span data-line="15;2/MovingMan.mdk:9"></span><code class="code code1">movingman.x</code><span data-line="15;2/MovingMan.mdk:9"></span>.
+</p>
+<p class="p indent" data-line="15;2/MovingMan.mdk:11"><span data-line="15;2/MovingMan.mdk:11"></span><em class="em-low1">Hint:</em><span data-line="15;2/MovingMan.mdk:11"></span> Begin with a moving man that doesn<span data-line="15;2/MovingMan.mdk:11"></span>&#39;<span data-line="15;2/MovingMan.mdk:11"></span>t actually move. The
+<span data-line="15;2/MovingMan.mdk:12"></span><code class="code code1">NodeList</code><span data-line="15;2/MovingMan.mdk:12"></span> yielded by the <span data-line="15;2/MovingMan.mdk:12"></span><code class="code code1">activenodes</code><span data-line="15;2/MovingMan.mdk:12"></span> property of the current node,
+is indeed already a list of <span data-line="15;2/MovingMan.mdk:13"></span><code class="code code1">Node</code><span data-line="15;2/MovingMan.mdk:13"></span> objects.
+</p>
+<p class="p indent" data-line="15;2/MovingMan.mdk:15"><span data-line="15;2/MovingMan.mdk:15"></span>Again, what happens if some of the nodes become unreachable? Would
+your program crash? Test this. Try and mitigate for this using the
+<span data-line="15;2/MovingMan.mdk:17"></span><code class="code code1">unavailable</code><span data-line="15;2/MovingMan.mdk:17"></span> construction.
+</p><h2 id="sec-watchdog" class="h1" data-line="17;2/Watchdog.mdk:1" data-heading-depth="1" style="display:block"><span data-line="17;2/Watchdog.mdk:1"></span><span class="heading-before"><span class="heading-label">3</span>.&#8194;</span><span data-line="17;2/Watchdog.mdk:1"></span>Watchdog</h2>
+<p class="p noindent" data-line="17;2/Watchdog.mdk:3"><span data-line="17;2/Watchdog.mdk:3"></span>Watchdog should check the Emerald nodes if they have gone down or is
+up again. Create a program where there are more machines that are up,
+and crash some of them to see if you get notified which node crashed
+(printout a node id as above).
+</p>
+<p class="p indent" data-line="17;2/Watchdog.mdk:8"><span data-line="17;2/Watchdog.mdk:8"></span>Let the Emerald-file be called <span data-line="17;2/Watchdog.mdk:8"></span><code class="code code1">watchdog.m</code><span data-line="17;2/Watchdog.mdk:8"></span>, and compile it as
+<span data-line="17;2/Watchdog.mdk:9"></span><code class="code code1">watchdog.x</code><span data-line="17;2/Watchdog.mdk:9"></span>.
+</p><h2 id="sec-keywords" class="h1" data-line="19;2/Keywords.mdk:1" data-heading-depth="1" style="display:block"><span data-line="19;2/Keywords.mdk:1"></span><span class="heading-before"><span class="heading-label">4</span>.&#8194;</span><span data-line="19;2/Keywords.mdk:1"></span>Keywords</h2>
+<p class="p noindent" data-line="19;2/Keywords.mdk:3"><span data-line="19;2/Keywords.mdk:3"></span>After completing these exercises, you should be familiar with the
+following keywords. If not, read up on them in the language report.
+</p>
+<ul class="ul list-star compact" data-line="19;2/Keywords.mdk:6">
+<li class="li ul-li list-star-li compact-li" data-line="19;2/Keywords.mdk:6"><span data-line="19;2/Keywords.mdk:6"></span><code class="code code1">Node</code><span data-line="19;2/Keywords.mdk:6"></span>
+</li>
+<li class="li ul-li list-star-li compact-li" data-line="19;2/Keywords.mdk:7"><span data-line="19;2/Keywords.mdk:7"></span><code class="code code1">NodeList</code><span data-line="19;2/Keywords.mdk:7"></span>
+</li>
+<li class="li ul-li list-star-li compact-li" data-line="19;2/Keywords.mdk:8"><span data-line="19;2/Keywords.mdk:8"></span><code class="code code1">fix</code><span data-line="19;2/Keywords.mdk:8"></span>
+</li>
+<li class="li ul-li list-star-li compact-li" data-line="19;2/Keywords.mdk:9"><span data-line="19;2/Keywords.mdk:9"></span><code class="code code1">unfix</code><span data-line="19;2/Keywords.mdk:9"></span>
+</li>
+<li class="li ul-li list-star-li compact-li" data-line="19;2/Keywords.mdk:10"><span data-line="19;2/Keywords.mdk:10"></span><code class="code code1">refix</code><span data-line="19;2/Keywords.mdk:10"></span>
+</li>
+<li class="li ul-li list-star-li compact-li" data-line="19;2/Keywords.mdk:11"><span data-line="19;2/Keywords.mdk:11"></span><code class="code code1">unavailable</code><span data-line="19;2/Keywords.mdk:11"></span>
+</li>
+<li class="li ul-li list-star-li compact-li" data-line="19;2/Keywords.mdk:12"><span data-line="19;2/Keywords.mdk:12"></span><code class="code code1">delay</code><span data-line="19;2/Keywords.mdk:12"></span>
+</li>
+<li class="li ul-li list-star-li compact-li" data-line="19;2/Keywords.mdk:13"><span data-line="19;2/Keywords.mdk:13"></span><code class="code code1">Time</code><span data-line="19;2/Keywords.mdk:13"></span>
+</li></ul>
+<h2 id="sec-tips" class="h1" data-line="21;2/Tips.mdk:1" data-heading-depth="1" style="display:block"><span data-line="21;2/Tips.mdk:1"></span><span class="heading-before"><span class="heading-label">5</span>.&#8194;</span><span data-line="21;2/Tips.mdk:1"></span>Tips</h2>
+<p class="p noindent" data-line="21;2/Tips.mdk:3"><span data-line="21;2/Tips.mdk:3"></span>You can use the <span data-line="21;2/Tips.mdk:3"></span><code class="code code1">$</code><span data-line="21;2/Tips.mdk:3"></span> as syntactic sugar for <span data-line="21;2/Tips.mdk:3"></span><code class="code code1">.get</code><span data-line="21;2/Tips.mdk:3"></span>.
+</p>
+<p class="p indent" data-line="21;2/Tips.mdk:5"><span data-line="21;2/Tips.mdk:5"></span>For instance, you can write <span data-line="21;2/Tips.mdk:5"></span><code class="code code1">eric$name</code><span data-line="21;2/Tips.mdk:5"></span> in place of <span data-line="21;2/Tips.mdk:5"></span><code class="code code1">eric.getname</code><span data-line="21;2/Tips.mdk:5"></span>
+above.
+</p><span data-line=""></span></div>
+</body>
+
+</html>
