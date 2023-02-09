@@ -21,9 +21,6 @@ const WotchIt <-
         host$stdout.putstring["Comming over. Kind regards, Kilroy\n"]
       end for
 
-      % Back to the begining.
-      move self to home
-
       % Report.
       stdout.putstring["I am done\n"]
 
