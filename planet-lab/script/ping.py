@@ -67,9 +67,9 @@ for line in fileinput.input():
         s.sendline("sudo ping -c 1 google.com")
         i = s.expect(["Name or service not known", "google.com ping statistics"])
         if i == 0:
-            print2(server, "Can't ping out")
+            print("GOOD" + server)
         else:
-            print("GOOD " + server)
+            print("VERY GOOD " + server)
 
         s.sendline('exit')
         s.expect(EOF)
