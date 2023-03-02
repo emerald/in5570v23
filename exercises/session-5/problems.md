@@ -12,6 +12,12 @@ March 02, 2023
 
 ---
 
+# General feedback.
+
+We talk about Oblig 1.
+
+---
+
 # Remote procedure call by message passing.
 
 One of the first object oriented langauges to support such a mechanism was SmallTalk (1970).
@@ -106,8 +112,36 @@ Why/when would it make sense to do so, and why?
 
 ---
 
-# Exercise 1 in the Oblig (break-of-point).
+# Exercise 1 in the Oblig 2 : (break-of-point).
 
 1. What is a break of point?
 2. Do we always expect a break-off point?
 3. How can we measure the break-off point?
+
+---
+
+# Protip of the week.
+
+In Emerald:
+
+```matlab
+e1[]
+  when unavailable
+    e2[]
+  end unavailable
+```
+
+Has the same semantics an exception handler, such as the `python`
+try-statement:
+
+```python
+try:
+    e1()
+except unavailable:
+    e2()
+```
+
+The main difference is the philosofical distinction between "I always do
+`e1` something except when I do `e2` because of `unavailable`" and "I want
+to do `e1` but I expect `unavailable` to happen sometimes, and `when` that
+happens, I do `e2` instead."
