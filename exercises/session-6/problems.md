@@ -69,40 +69,50 @@ results. Implement an Emerald program `async.m`, to provide three object
 classes:
 
 ```matlab
+
+% An asynchroneous task, is a computation that you can wait for, or you can
+% ask if it is ready.
 const Task <-
   immutable object definition
     export function of [A : type] -> [Task : type]
       forall A
 
       Task <- typeobject interface
-                 function async [] -> [ Result : A ]
-                 function poll  [] -> [ Ready  : boolean ]
+                 function await [] -> [ result : A ]
+                 function poll  [] -> [ ready  : boolean ]
                end interface
     end of
   end definition
 
+% Anything `f` that implements a function `f.of[x]` is called runnable.
 const Runnable <-
   immutable object definition
-    export function of [A : type, B : type] -> [Task : type]
+    export function of [A : type, B : type] -> [ Call : type ]
 
-      Task <- typeobject interface
-                 function run [ A ] -> [ B ]
-               end interface
+      forall A
+      forall B
+
+      Call <-
+        typeobject interface
+          function of [ argument : A ] -> [ result : B ]
+        end interface
     end of
   end definition
 
 const Async <-
   immutable object definition
-    export function of [ f : Runnable.of[A, B] , x : A ] -> [ Defer : Task.of[B] ]
+    export function call [ f : Fun , x : A ] -> [ Defer : Compute ]
 
       forall A
       forall B
+      where  Fun     <- Runnable.of[A, B]
+      where  Compute <- Task.of[B]
 
       Defer <-
-        [ your code here ]
-
-    end of
+        ... [your code here] ...
+    end call
   end definition
+
 ```
 
 For any `Task` T, the semantics of `poll` and `async` should be:
