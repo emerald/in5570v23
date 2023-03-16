@@ -75,8 +75,8 @@ const Task <-
       forall A
 
       Task <- typeobject interface
-                 function async -> [ Result : A ]
-                 function poll  -> [ Ready  : boolean ]
+                 function async [] -> [ Result : A ]
+                 function poll  [] -> [ Ready  : boolean ]
                end interface
     end of
   end definition
@@ -91,14 +91,15 @@ const Runnable <-
     end of
   end definition
 
-const async <-
+const Async <-
   immutable object definition
-    export function of [ Runnable.of[A, B] , A ] -> [ Defer : Task.of[B] ]
+    export function of [ f : Runnable.of[A, B] , x : A ] -> [ Defer : Task.of[B] ]
 
       forall A
       forall B
 
-      Defer <- [ your code here]
+      Defer <-
+        [ your code here ]
 
     end of
   end definition
@@ -109,24 +110,17 @@ For any `Task` T, the semantics of `poll` and `async` should be:
   * `poll[]` should check wether an asynchronous task has completed
     yet. If it has not completed yet, then the result is `false`.
 
-  * `wait[]` that waits for an asynchronous action to complete, and
-    return the value of the computation.
+  * `async[]` that waits for an asynchronous action to complete, and return
+    the value of the computation. If the action has already completed, then
+    `async[]` should just return immediately.
 
 ---
 
 # Challenge:
 
-Extend the API of `Task`, with an operation `wait_any[asyncs]`, that takes
+Extend the API of `Task`, with an operation `any[asyncs]`, that takes
 as argument an array of `Task.of[A]`, and returns whenever some `A` is
 ready.
-
----
-
-# Rock, Paper Scissors.
-
-Write an application for playing rock paper scissors by remote procedure call.
-
-We will design an API togehter in class, and I will update the exercise accordingly.
 
 # Home exam 1.
 
