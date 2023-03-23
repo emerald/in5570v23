@@ -60,10 +60,24 @@ Happy coding.
 # Home Exam 1.
 
 If you pick a couple of integers $z$, $w$ and $d$ to have the properties
-$w < d$, $1 < z < 2^w - 1$. Then, we can call an array of length $2^d$
-an $d$ dimensional array, and define a function:
+$w < d$, $1 < z < 2^w - 1$. Then
 
 $h(x) = ( (z \cdot x)\ mod\ 2^w )\ div\ 2^{w-d}$
 
-is a 2-universal hash function. I will give a brief explaination of why that
+is a 2-universal hash function with $2^w$ bit integers as its domain, and
+$2^d$ integers as its range.
+
+It takes little effort to realize that this function can be implemented in
+`C` as follows:
+
+```c
+int hash(T x) {
+  return ((unsigned)(z * hashCode(x))) >> (w-d);
+}
+```
+
+The interested reader may consult Mikkel Thorup's "high speed hashing for
+integers and strings" to find out more about universality and hash functions
+that run fast, but today, I will just give a brief explaination of why that
 is, and why that is useful.
+
