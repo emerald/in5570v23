@@ -63,10 +63,7 @@ If you pick a couple of integers $z$, $w$ and $d$ to have the properties
 $w < d$, $1 < z < 2^w - 1$. Then, we can call an array of length $2^d$
 an $d$ dimensional array, and define a function:
 
-$h(x) = ( (z * x) mod 2^w ) div 2^{w-d}$
+$h(x) = ( (z \cdot x)\ mod\ 2^w )\ div\ 2^{w-d}$
 
-and we get to say the $h$ is a
-
-
-I have promised to write one and put it on
-the course page, but it is important that you know how it works.
+is a 2-universal hash function. I will give a brief explaination of why that
+is, and why that is useful.
