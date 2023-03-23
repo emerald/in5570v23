@@ -12,12 +12,6 @@ March 16, 2023
 
 ---
 
-(The following exercises are inspired by a similar exercises formulated by
-Ken Friis Larsen `(kflarsen@diku.dk)` for a course at The University of
-Copenhagen).
-
----
-
 # General resubmissions.
 
 Put a comment on a structure, to describe what it is:
@@ -65,8 +59,9 @@ const BoundedBuffer <-
 # Object oriented design (async).
 
 Write a library for running tasks asynchronously and waiting for their
-results. Implement an Emerald program `async.m`, to provide three object
-classes:
+results. Implement an Emerald program `async.m`, to provide a factory object
+`Async` that produces asynchoroneous tasks using the following programming
+interface:
 
 ```matlab
 
@@ -115,22 +110,22 @@ const Async <-
 
 ```
 
-For any `Task` T, the semantics of `poll` and `async` should be:
+For any `Task` T, the semantics of `poll` and `await` should be:
 
   * `poll[]` should check wether an asynchronous task has completed
     yet. If it has not completed yet, then the result is `false`.
 
-  * `async[]` that waits for an asynchronous action to complete, and return
-    the value of the computation. If the action has already completed, then
-    `async[]` should just return immediately.
+  * `await[]` that awaits for an asynchronous actions completion, and then
+    returns the value resulting from its computation. If the action has
+    already completed, then `await[]` should just return immediately.
 
 ---
 
 # Challenge:
 
-Extend the API of `Task`, with an operation `any[asyncs]`, that takes
+Extend the API of `Task`, with an operation `await_any[asyncs]`, that takes
 as argument an array of `Task.of[A]`, and returns whenever some `A` is
-ready.
+ready. - Describe briefly what your synchronization mechanism is.
 
 # Home exam 1.
 
