@@ -80,4 +80,3 @@ The interested reader may consult Mikkel Thorup's "high speed hashing for
 integers and strings" to find out more about universality and hash functions
 that run fast, but today, I will just give a brief explaination of why that
 is, and why that is useful.
-
