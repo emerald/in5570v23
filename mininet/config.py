@@ -1,9 +1,8 @@
 # Import the stuff
-from mininet.topo import Topo
-from mininet.net  import Mininet
-from mininet.node import OVSSwitch
+from mininet.topo    import Topo
+from mininet.nodelib import NAT
 
-# Setup the network.
+# Setup the network topology.
 class NetworkTopology( Topo ):
     "Simple topology example."
 
@@ -19,11 +18,16 @@ class NetworkTopology( Topo ):
         s1 = self.addSwitch( 's1' )
         s2 = self.addSwitch( 's2' )
 
+        # Add Network Address Translation
+        nat = self.addNode('nat0', cls=NAT, ip='10.0.0.254/24', inNamespace=False)
+
         # Add links
         self.addLink( h1 , s1 , delay='100ms')
         self.addLink( s1 , s2 , delay='200ms')
         self.addLink( s2 , h2 , delay='300ms')
         self.addLink( s2 , h3 , delay='175ms')
+
+        self.addLink( s1 , nat ) # internet access
 
 # Name for everyone outside to refer to
 topos = { 'in5570': ( lambda: NetworkTopology() ) }
