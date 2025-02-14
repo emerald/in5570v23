@@ -7,8 +7,8 @@ sudo apt install python3
 sudo apt install docker
 sudo apt install build-essential
 
-# run the script.
+# initiate topology.
 sudo mn --custom ./config.py --topo in5570 -x
 
-# perform cleanup (not strictly nessesary).
+# perform cleanup.
 sudo mn -c
