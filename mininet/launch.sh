@@ -1,5 +1,9 @@
 set -e
 
+# make sure you have the latest versions of stuff
+sudo apt update
+sudo apt upgrade -y
+
 # install the stuff.
 sudo apt install mininet
 sudo apt install wireshark

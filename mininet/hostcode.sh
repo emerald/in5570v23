@@ -1,6 +1,6 @@
 
-sudo apt update
-sudo apt install docker.io
-sudo apt install build-essential
-
+# the intention is that each code runs something like this.
+apt update
+apt install docker.io
+apt install build-essential
 make environment
