@@ -12,7 +12,7 @@ February 23, 2023
 
 ---
 
-# Lets talk about synchronization.
+# Let's talk about synchronization.
 
 discuss with the person on your right.
 
@@ -47,7 +47,7 @@ many times `f` uses `B`, and how large `B` is, when is it faster to use
 Look up the keyword `attach` in the language report.
 
 1. What are the semantics of `attach`?
-2. Look in the (standard library)[https://github.com/emerald/src-versions/tree/master/ubc-latest-src/Builtins] for a ussage of `attach`.
+2. Look in the (standard library)[https://github.com/emerald/src-versions/tree/master/ubc-latest-src/Builtins] for a usage of `attach`.
 3. Why did the library implementer use `attach` here?
 
 ---

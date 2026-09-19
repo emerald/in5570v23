@@ -20,8 +20,8 @@ We talk about Oblig 1.
 
 # Remote procedure call by message passing.
 
-One of the first object oriented langauges to support such a mechanism was SmallTalk (1970).
-The mechanism was walled "remote messaging".
+One of the first object oriented languages to support such a mechanism was SmallTalk (1970).
+The mechanism was called "remote messaging".
 
 ```smalltalk
 "Client code"
@@ -37,7 +37,7 @@ remote_messaging register: remote_object underName: 'kilroy'.
 
 # Remote procedure call by method invocation (library).
 
-In a programming language like Python of Java, remote method invocation can
+In a programming language like Python or Java, remote method invocation can
 be performed by library functions. Here is an example in `Python`.
 
 ```python
@@ -76,9 +76,9 @@ const kilroy <- object % ...
 # Object mobility.
 
 Just like remote procedure call, there are several options, and one is a
-library. Forinstance, Java has `JADE` (Java Agent Development Framework).
+library. For instance, Java has `JADE` (Java Agent Development Framework).
 
-We can also send the contents of an object in a message as is costumary in
+We can also send the contents of an object in a message as is customary in
 languages such as `Erlang` or `Elixir`.
 
 In Emerald this is also built-in:
@@ -98,14 +98,14 @@ kilroy.greeting()
 
 ---
 
-# Parameter Parsing (repitition).
+# Parameter Parsing (repetition).
 
 The version of `Emerald` we handed out implements
 `call-by-object-reference`. Which means that a variable is essentially
 implemented by a pointer to a structure.
 
 `Emerald` could support a more exotic operation invocation semantics,
-`call-by-move`. Which means that the objects pointed to by an operations
+`call-by-move`. Which means that the objects pointed to by an operation's
 parameters could be moved to the node at which the invocation is performed.
 
 Why/when would it make sense to do so, and why?
@@ -141,7 +141,7 @@ except unavailable:
     e2()
 ```
 
-The main difference is the philosofical distinction between "I always do
+The main difference is the philosophical distinction between "I always do
 `e1` something except when I do `e2` because of `unavailable`" and "I want
 to do `e1` but I expect `unavailable` to happen sometimes, and `when` that
 happens, I do `e2` instead."

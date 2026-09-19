@@ -51,7 +51,7 @@ suitable object representation of a rock--paper--scissors strategy.
 
 Now, you can play rock paper scissors via remote method invocation with NPCs
 placed around planet lab, you can also set up games between NPCs to see
-which strategies beat eachother `{^_^}`.
+which strategies beat each other `{^_^}`.
 
 Happy coding.
 
@@ -78,5 +78,5 @@ int hash(T x) {
 
 The interested reader may consult Mikkel Thorup's "high speed hashing for
 integers and strings" to find out more about universality and hash functions
-that run fast, but today, I will just give a brief explaination of why that
+that run fast, but today, I will just give a brief explanation of why that
 is, and why that is useful.

@@ -60,12 +60,12 @@ const BoundedBuffer <-
 
 Write a library for running tasks asynchronously and waiting for their
 results. Implement an Emerald program `async.m`, to provide a factory object
-`Async` that produces asynchoroneous tasks using the following programming
+`Async` that produces asynchronous tasks using the following programming
 interface:
 
 ```matlab
 
-% An asynchroneous task, is a computation that you can wait for, or you can
+% An asynchronous task, is a computation that you can wait for, or you can
 % ask if it is ready.
 const Task <-
   immutable object definition
@@ -112,10 +112,10 @@ const Async <-
 
 For any `Task` T, the semantics of `poll` and `await` should be:
 
-  * `poll[]` should check wether an asynchronous task has completed
+  * `poll[]` should check whether an asynchronous task has completed
     yet. If it has not completed yet, then the result is `false`.
 
-  * `await[]` that awaits for an asynchronous actions completion, and then
+  * `await[]` that awaits for an asynchronous action's completion, and then
     returns the value resulting from its computation. If the action has
     already completed, then `await[]` should just return immediately.
 

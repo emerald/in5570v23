@@ -43,7 +43,7 @@ const WotchIt <-
         const here <- locate self
         const host <- contact$theNode
         % Remote Method invocation.
-        host$stdout.putstring["Comming over. Kind regards, Kilroy\n"]
+        host$stdout.putstring["Coming over. Kind regards, Kilroy\n"]
         % ... call move here ...
       end for
 
