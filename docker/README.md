@@ -7,7 +7,7 @@ This is the fastest way to get Emerald to run on your machine.
 
 ## Environment
 
-You can compile and run emerald programs from with in the Docker image.
+You can compile and run emerald programs from within the Docker image.
 To do so, type in the command
 
 ```bash

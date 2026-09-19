@@ -175,7 +175,7 @@ const Main <-
 
 ---
 
-# Inherritance
+# Inheritance
 
 Inheritance just increments the arity of `create`:
 
@@ -213,7 +213,7 @@ const ToString <-
 ```
 
 Does `ToString` conform to `FromString`.
-How about visa versa?
+How about vice versa?
 
 ---
 
